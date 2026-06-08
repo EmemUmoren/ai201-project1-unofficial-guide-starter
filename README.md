@@ -129,6 +129,32 @@ Always cite which document(s) your answer comes from.
 - Metadata filtering: Allow users to filter by apartment name, which would retrieve only Circle reviews before re-ranking by relevance
 - Longer context: Include apartment name in the chunk metadata and weight it during retrieval
 
+## Stretch Feature: Hybrid Search (Implemented)
+
+**What it does:** Combines semantic search (embeddings) with BM25 keyword matching using reciprocal rank fusion (RRF). For each query, it runs both retrieval methods separately and merges results by combined score: `hybrid_score = 1/(semantic_rank+1) + 1/(bm25_rank+1)`.
+
+**How to use it:**
+```python
+from src.embedding import RAGSystem
+rag = RAGSystem()
+rag.embed_and_store()
+results = rag.retrieve_hybrid("What safety issues do students report at The Circle?")
+# Returns same format as retrieve(): list of dicts with text, source, chunk_id
+```
+
+**Why it doesn't help for this dataset:**
+- Tested hybrid search on all 5 evaluation questions
+- Expected improvement: boost apartment-specific Yelp reviews by matching exact apartment names
+- Actual result: **No improvement on Q1, regression on Q2-Q4** (hybrid returned fewer correct sources than semantic alone)
+- Root cause: BM25 retrieves based on word frequency, not semantic relevance. Generic mentions of "management," "maintenance," etc. in unrelated apartments ranked high in BM25 and polluted the merged results, crowding out true matches
+- Lesson: Hybrid search helps when semantic and keyword searches find different relevant results. Here, both searches struggle with the same problem (topic > proper noun relevance), and merging them just adds noise
+
+**Implementation details:**
+- Uses `rank_bm25` library (BM25Okapi algorithm) on tokenized chunk text
+- Initialized at RAGSystem construction for performance
+- Reciprocal rank fusion with equal weights (1.0x each): prevents one method from dominating
+- Handles chunks found by only one method (assigns worst-rank if not in top-k)
+
 ## Spec Reflection
 
 **One way the spec helped during implementation:**
