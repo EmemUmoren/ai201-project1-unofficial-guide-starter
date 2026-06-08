@@ -2,6 +2,35 @@
 
 A RAG system that makes student-generated housing knowledge searchable and answerable. Students ask plain-language questions about Rice off-campus apartments and get grounded answers from real resident reviews.
 
+## Demo Video
+
+See the system in action: **[demo.mp4](demo.mp4)**
+
+The video shows:
+- 3+ different queries with source citations
+- Strong retrieval example (District at Greenbriar parking)
+- Weak retrieval example (Circle safety) with failure analysis
+- Correct refusal to hallucinate (Gramercy fees not in corpus)
+- Walkthrough of evaluation results and failure case analysis
+
+## Quick Start
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+cp .env.example .env
+# Add your Groq API key to .env
+
+# Run the web interface
+python3 src/app.py
+# Opens at http://localhost:7860
+```
+
+Ask questions like:
+- "What do students say about safety at The Circle?"
+- "How responsive is Latitude management?"
+- "What maintenance issues do residents complain about at The Maroneal?"
+
 ## Domain
 
 This system helps Rice University students (incoming and current) find trustworthy insights about off-campus apartments. This knowledge is valuable but hard to find because apartment complexes market themselves positively on official websites, while honest resident experiences are scattered across Yelp reviews, Reddit threads, and housing forums. By aggregating real voices into one searchable system, students can quickly compare apartments based on evidence from people who have actually lived there.
