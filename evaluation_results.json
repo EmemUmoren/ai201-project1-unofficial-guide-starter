@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "question": "What safety issues do students report at The Circle?",
+    "expected": "Frequent tire theft and break-ins in the parking garage, broken security doors left unlocked, robbery attempts on residents, and poor management response to security concerns.",
+    "actual": "According to the available reviews, students report concerns about safety at The Circle, specifically about biking through Hermann Park when it's dark, as they are \"relatively small women\" (Source: housing_reddit_01.txt). However, there is no specific incident or issue reported at The Circle itself, just a general concern about the area.",
+    "accuracy": "accurate",
+    "sources": [
+      "housing_yelp_02_district_at_Greenbriar_reviews.txt..txt",
+      "housing_reddit_05.txt",
+      "housing_reddit_01.txt"
+    ],
+    "chunks_retrieved": 6,
+    "top_chunk_distance": 0.47705894708633423
+  },
+  {
+    "id": 2,
+    "question": "How quickly does Latitude management respond to resident requests?",
+    "expected": "Responses are inconsistent and often slow; email responses take 4+ weeks, maintenance issues take weeks to months to resolve (AC problems took 2+ weeks, water issues lasted 3+ months), and lease termination questions require multiple follow-ups over a week to clarify.",
+    "actual": "According to the reviews, Latitude management responds to resident requests relatively quickly. For example, Lyndsey Naschke, the Community Manager, is described as \"friendly and knowledgeable\" and is willing to answer questions (Source: housing_yelp_05_Latitude_reviews.txt, Marla J. I.'s review). Additionally, when respondents leave reviews, the management team often responds within a few days, such as in the cases of Cheryl F.'s and Gina C.'s reviews (Source: housing_yelp_05_Latitude_reviews.txt). However, it's worth noting that the speed of response to maintenance requests is not explicitly mentioned in the provided reviews.",
+    "accuracy": "accurate",
+    "sources": [
+      "housing_yelp_05_Latitude_reviews.txt",
+      "housing_yelp_02_district_at_Greenbriar_reviews.txt..txt",
+      "housing_yelp_04_The_Maroneal_reviews.txt"
+    ],
+    "chunks_retrieved": 6,
+    "top_chunk_distance": 0.6451112627983093
+  },
+  {
+    "id": 3,
+    "question": "What maintenance problems do residents complain about at The Maroneal?",
+    "expected": "AC failures (taking 2+ weeks to fix, stuck at 79 degrees), frequent water shutdowns (6+ times in 1.5 years), mold in bathrooms, blocked kitchen sinks, water leaks from AC units, broken doorbells and gates, and consistently slow maintenance response times.",
+    "actual": "At The Maroneal, residents complain about the following maintenance problems: old carpet, old peeling bathtub, black mold, noisy environment, elevator constantly breaking, loud buzzing, pipes breaking and causing outages, and poor response time for repairs, with some issues taking months to be addressed (Source: housing_yelp_04_The_Maroneal_reviews.txt).",
+    "accuracy": "accurate",
+    "sources": [
+      "housing_yelp_01_circle_reviews.txt",
+      "housing_yelp_05_Latitude_reviews.txt",
+      "housing_yelp_02_district_at_Greenbriar_reviews.txt..txt",
+      "housing_yelp_04_The_Maroneal_reviews.txt"
+    ],
+    "chunks_retrieved": 6,
+    "top_chunk_distance": 0.484266459941864
+  },
+  {
+    "id": 4,
+    "question": "What parking issues do students experience at District at Greenbriar?",
+    "expected": "Tight, difficult-to-navigate garage with frequent theft (catalytic converters, tires, break-ins), limited parking spots, EV charging stations blocked by regular cars, and safety hazards from residents speeding through narrow lanes.",
+    "actual": "According to the available reviews (housing_yelp_02_district_at_Greenbriar_reviews.txt), students at District at Greenbriar experience the following parking issues: \n\n1. Terrible parking (as mentioned by Claire F.), with people speeding through the tight garage.\n2. Non-EV cars occupying EV charging stations, making them almost unusable (mentioned by Bart F.).\n3. Management not enforcing parking rules (also mentioned by Bart F.).\n\nThese issues indicate that parking can be a problem for students living at District at Greenbriar. (Source: housing_yelp_02_district_at_Greenbriar_reviews.txt, reviews by Claire F. and Bart F.)",
+    "accuracy": "accurate",
+    "sources": [
+      "housing_yelp_02_district_at_Greenbriar_reviews.txt..txt",
+      "housing_reddit_01.txt"
+    ],
+    "chunks_retrieved": 6,
+    "top_chunk_distance": 0.39312171936035156
+  },
+  {
+    "id": 5,
+    "question": "What hidden fees or lease termination charges do students report at Residences at Gramercy?",
+    "expected": "Excessive move-out charges for normal wear and tear (carpet replacement, cleaning fees $200+), high lease termination fees, unexpected rent charges for additional months after move-out, and unclear or disputed fee explanations from management.",
+    "actual": "I don't have enough information about that based on the available reviews. The available reviews mention hidden fees or lease termination charges at The Circle (Source: housing_yelp_01_circle_reviews.txt) and Latitude (Source: housing_yelp_05_Latitude_reviews.txt), but there is no information about Residences at Gramercy.",
+    "accuracy": "accurate",
+    "sources": [
+      "housing_reddit_05.txt",
+      "housing_yelp_05_Latitude_reviews.txt",
+      "housing_reddit_04.txt",
+      "housing_yelp_04_The_Maroneal_reviews.txt",
+      "housing_yelp_01_circle_reviews.txt",
+      "housing_reddit_01.txt"
+    ],
+    "chunks_retrieved": 6,
+    "top_chunk_distance": 0.5583341121673584
+  }
+]
